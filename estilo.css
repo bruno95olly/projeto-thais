@@ -1,0 +1,154 @@
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.div-mae{
+  width: auto;
+  max-height: 100px;
+  background-color: #F8F9FA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 3%;
+}
+
+.div-img-menus{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.div-img{
+  display: flex;
+  align-items: center;
+}
+
+.div-img > img {
+  height: 48px;
+}
+
+.div-menus{
+  font-size: 20px;
+}
+
+.div-menus > ul{
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.div-menus > ul > li > a{
+  color: #000000A6;
+  text-decoration: none;
+}
+
+.div-inputs{
+}
+
+.div-inputs > input {
+  border: solid 1px #dcdcdc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  outline: none;
+  font-size: 16px;
+}
+
+.div-inputs > button{
+  background-color: transparent;
+  outline: none;
+  border: solid 1px #196754;
+  color: #198754;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+.div-banner{
+  height: 500px;
+  overflow: hidden;
+}
+
+.div-banner > img {
+  height: 100%;
+  object-fit: cover;
+  transition: 3s;
+}
+
+.div-produtos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 64px 128px;
+  gap: 32px 32px;
+}
+
+.div-produtos > .card-produto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.div-produtos > .card-produto > figure {
+  overflow: hidden;
+  width: 100%;
+}
+
+.div-produtos > .card-produto img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  transition: 1s;
+  filter: brightness(.7);
+
+}
+
+.div-produtos > .card-produto img:hover{
+  transform: scale(1.2);
+  filter: brightness(1);
+}
+
+.div-produtos > .card-produto > p {
+  margin: 0;
+}
+
+@media (max-width: 512px) {
+  .div-inputs, .div-img-menus{
+    display: none;
+  }
+
+  ion-icon{
+    font-size: 32px;
+  }
+
+  .div-banner{
+    height: 25vh;
+  }
+
+  .div-produtos{
+    grid-template-columns: 1fr 1fr;
+    padding: 32px 16px;
+    gap: 16px;
+  }
+
+  .div-produtos > .card-produto {
+    gap: 8px;
+  }
+
+  .div-produtos > .card-produto img {
+    height: 35vh;
+  }
+}
+
+@media (min-width: 513px) {
+  .div-inputs-mobile{
+    display: none;
+  }
+}
+
